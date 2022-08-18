@@ -2,4 +2,3 @@ axel:
 
 - Blanda ordningen på bilder och svar
 - Absoluta positioner 
-- Clear svars område efter varje svar

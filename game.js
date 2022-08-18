@@ -47,6 +47,7 @@ function results(correct) {
   display_results_text.style.visibility = "visable";
   next_button.style.visibility = "visible";
   guess_button.style.visibility = "hidden";
+  inp.value = "";
 }
 
 // vad som händer när man klickar på test/gissa knaååen
