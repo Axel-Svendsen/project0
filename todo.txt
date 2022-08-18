@@ -1,6 +1,6 @@
 game:
 
-- Blanda ordningen på bilder och svar
+- Blanda ordningen på bilder och svar - axel s fixar
 - Absoluta positioner 
 
 
