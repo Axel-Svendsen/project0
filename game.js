@@ -86,7 +86,7 @@ function clicked() {
 
 //vad som händer när man klickar på next knappen
 function next_person() {
-  pointer = pointer + 1
+pointer = pointer + 1
   console.log(pointer)
   pic.src = images[getPointerVal(pointer)];
   display_results_text.style.visibility = "hidden";
@@ -115,6 +115,7 @@ function getPointerVal(pointer){
   }
 }
 
+// funktion som kan shuffela en array randomly
 function shuffle(array) {
   let currentIndex = array.length,  randomIndex;
 
