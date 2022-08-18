@@ -1,9 +1,9 @@
-axel s:
+game:
 
 - Blanda ordningen på bilder och svar
 - Absoluta positioner 
 - offset på varje page (så navbar inte täcker)
 
-axel j:
+html/css:
 
--Fixa main page logo
+-Fixa main page logo - axel j fixar
