@@ -8,3 +8,7 @@ html/css:
 
 - Fixa main page logo - axel j fixar
 - offset på varje page (så navbar inte täcker)
+
+
+
+
