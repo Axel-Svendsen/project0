@@ -1,14 +1,13 @@
 game:
 
-- Blanda ordningen på bilder och svar - axel s fixar
+- visa rätt svar vid fel gissning
 - Absoluta positioner 
-
+- checkbox som ändrar random
 
 html/css:
 
 - Fixa main page logo - axel j fixar
 - offset på varje page (så navbar inte täcker)
-
 
 
 
