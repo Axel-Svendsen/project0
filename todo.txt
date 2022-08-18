@@ -1,4 +1,5 @@
-axel:
 
 - Blanda ordningen på bilder och svar
 - Absoluta positioner 
+- snygg frontpage
+- offset på varje page (så navbar inte täcker)
