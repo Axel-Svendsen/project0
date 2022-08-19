@@ -45,6 +45,7 @@ const next_button = document.getElementById("next_person");
 const guess_button = document.getElementById("guess");
 const score_disp = document.getElementById("score");
 const tjock = document.getElementById("tjock");
+const end = document.getElementById("end");
 
 // ser till att första bilden altid är rätt person
 pic.src = images[getPointerVal(pointer)]
@@ -105,15 +106,16 @@ function clicked() {
 }
 
 function game_over(){
-  next_button.innerHTML = "play again?"
   gamestate = "over"
   tjock.style.width = "100%";
+  end.style.visibility = "visible";
 }
 
 function game_end(){
   next_button.style.visibility = "hidden";
   guess_button.style.visibility = "hidden";
   tjock.style.width = "100%";
+  end.style.visibility = "visible";
 }
 
 //vad som händer när man klickar på next knappen
