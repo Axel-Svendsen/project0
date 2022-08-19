@@ -6,7 +6,7 @@ var gamestate = "onging";
 var random = 1
 
 
-const images = ["personer/donald_trump.png",
+var images = ["personer/donald_trump.png",
   "personer/ryan_gosling.png",
   "personer/20220715_213252.jpg",
   "personer/Kirby.webp",
@@ -17,7 +17,7 @@ const images = ["personer/donald_trump.png",
   "personer/Michelangelo.jpeg",
   "personer/scrunkle.png"];
 
-  const people = ["Donald_Trump<donald_trump<donald<trump",
+  var people = ["Donald_Trump<donald_trump<donald<trump",
   "Ryan_Gosling<ryan_gosling<ryan<gosling",
   "Viktor_Rozman<viktor_rozman<viktor<rozman",
   "Kirby<kirby",
@@ -28,6 +28,9 @@ const images = ["personer/donald_trump.png",
   "Turtle<turtle<michelangelo",
   "scrunkle<katt<banan_goblin"];
 
+  //images = ["personer/donald_trump.png","personer/ryan_gosling.png",];
+
+  //people = ["Donald_Trump<donald_trump<donald<trump","Ryan_Gosling<ryan_gosling<ryan<gosling",];
 
 var random_array = shuffle(generate_array(people.length))
 
