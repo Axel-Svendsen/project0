@@ -12,3 +12,13 @@ html, body {
 .center {
   text-align: center;
 }
+
+#tjock  {
+  width: 0%;
+  height: 100%;
+  background-color : rgb(0, 0, 0);
+  opacity: 0.5;
+  position :absolute; 
+
+
+}
