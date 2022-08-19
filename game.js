@@ -13,7 +13,8 @@ const images = ["personer/donald_trump.png",
   "personer/Spongebob.png",
   "personer/Elon_Musk_Smoke.webp",
   "personer/Felix_Kjellberg.jpeg",
-  "personer/jonas_blom.png"];
+  "personer/jonas_blom.png",
+  "personer/Michelangelo.jpeg"];
 
 const people = ["Donald_Trump<donald_trump<donald<trump",
   "Ryan_Gosling<ryan_gosling<ryan<gosling",
@@ -22,7 +23,8 @@ const people = ["Donald_Trump<donald_trump<donald<trump",
   "Spongebob<spongebob<sponge_bob<svampbob<svamp_bob",
   "Elon_Musk<elon_musk<elon<musk",
   "Felix_Kjellberg<felix_kjellberg<felix",
-  "Jonas_Blom<jonas_blom<jonas<blom"];
+  "Jonas_Blom<jonas_blom<jonas<blom",
+  "Michelangelo<mike<turtle"];
 
 
 var random_array = shuffle(generate_array(people.length))
