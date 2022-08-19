@@ -6,7 +6,7 @@ var gamestate = "onging";
 var random = 1
 
 
-/*var images = ["personer/donald_trump.png",
+var images = ["personer/donald_trump.png",
   "personer/ryan_gosling.png",
   "personer/20220715_213252.jpg",
   "personer/Kirby.webp",
@@ -27,7 +27,7 @@ var random = 1
   "Jonas_Blom<jonas_blom<jonas<blom",
   "Turtle<turtle<michelangelo",
   "scrunkle<katt<banan_goblin"];
-  */
+  
 
   images = ["personer/donald_trump.png","personer/ryan_gosling.png",];
 
