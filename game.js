@@ -12,7 +12,8 @@ const images = ["personer/donald_trump.png",
   "personer/Kirby.webp",
   "personer/Spongebob.png",
   "personer/Elon_Musk_Smoke.webp",
-  "personer/Felix_Kjellberg.jpeg"];
+  "personer/Felix_Kjellberg.jpeg",
+  "personer/jonas_blom.png"];
 
 const people = ["donald_trump<donald<trump",
   "ryan_gosling<ryan<gosling",
@@ -20,7 +21,8 @@ const people = ["donald_trump<donald<trump",
   "kirby",
   "spongebob<sponge_bob<svampbob<svamp_bob",
   "elon_musk<elon<musk",
-  "Felix_Kjellberg<felix<pewdi"];
+  "Felix_Kjellberg<felix<pewdi",
+  "jonas_blom<jonas"];
 
 
 var random_array = shuffle(generate_array(people.length))
@@ -49,8 +51,7 @@ function results(correct) {
     score = score + 1;
   }
   else if (correct == 0) {
-
-    display_results_text.innerHTML = "Fel!";
+    display_results_text.innerHTML = people[getPointerVal(pointer)];
     display_results_text.style = "color: red";
     console.log("fel");
     fel.push(getPointerVal(pointer));
