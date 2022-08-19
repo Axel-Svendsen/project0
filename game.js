@@ -14,6 +14,7 @@ const images = ["personer/donald_trump.png",
   "personer/Elon_Musk_Smoke.webp",
   "personer/Felix_Kjellberg.jpeg",
   "personer/jonas_blom.png",
+  "personer/Michelangelo.jpeg",
   "personer/scrunkle.png"];
 
   const people = ["Donald_Trump<donald_trump<donald<trump",
@@ -24,6 +25,7 @@ const images = ["personer/donald_trump.png",
   "Elon_Musk<elon_musk<elon<musk",
   "Felix_Kjellberg<felix_kjellberg<felix",
   "Jonas_Blom<jonas_blom<jonas<blom",
+  "personer/Michelangelo.jpeg",
   "scrunkle<katt<banan_goblin"];
 
 
