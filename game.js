@@ -51,7 +51,7 @@ function results(correct) {
     score = score + 1;
   }
   else if (correct == 0) {
-    display_results_text.innerHTML = people[getPointerVal(pointer)];
+    display_results_text.innerHTML = people[getPointerVal(pointer)].replace("_", " ");
     display_results_text.style = "color: red";
     console.log("fel");
     fel.push(getPointerVal(pointer));
