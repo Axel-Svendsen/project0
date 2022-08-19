@@ -29,9 +29,9 @@ var images = ["personer/donald_trump.png",
   "Turtle<turtle<michelangelo",
   "scrunkle<katt<banan_goblin"];
 
-  //images = ["personer/donald_trump.png","personer/ryan_gosling.png",];
+  images = ["personer/donald_trump.png","personer/ryan_gosling.png",];
 
-  //people = ["Donald_Trump<donald_trump<donald<trump","Ryan_Gosling<ryan_gosling<ryan<gosling",];
+  people = ["Donald_Trump<donald_trump<donald<trump","Ryan_Gosling<ryan_gosling<ryan<gosling",];
 
 var random_array = shuffle(generate_array(people.length))
 
@@ -114,7 +114,7 @@ function clicked() {
 
 
 function game_over(){
-  end_text.innerHTML = "do you want to play again with"
+  end_text.innerHTML = "do you want to play again with the ones you missed?"
   gamestate = "over"
   tjock.style.width = "100%";
   end.style.visibility = "visible";
