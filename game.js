@@ -1,3 +1,4 @@
+                 
 var pointer = 0;
 var score = 0;
 var gamestate = "onging";
@@ -27,7 +28,6 @@ var images = ["personer/donald_trump.png",
   "Jonas_Blom<jonas_blom<jonas<blom",
   "Turtle<turtle<michelangelo",
   "scrunkle<katt<banan_goblin"];
-  
 
   images = ["personer/donald_trump.png","personer/ryan_gosling.png",];
 
@@ -47,11 +47,14 @@ const score_disp = document.getElementById("score");
 const tjock = document.getElementById("tjock");
 const end = document.getElementById("end");
 const display_list_length = document.getElementById("person");
+const end_text = document.getElementById("end_text");
 
 display_list_length.innerHTML = people.length;
 
 // ser till att första bilden altid är rätt person
 pic.src = images[getPointerVal(pointer)]
+
+
 
 // har hand om att förmedla ifall svaret var rätt eller fel till användaren
 function results(correct) {
@@ -108,17 +111,32 @@ function clicked() {
 
 }
 
+
+
 function game_over(){
+  end_text.innerHTML = "do you want to play again with the ones you missed?"
   gamestate = "over"
   tjock.style.width = "100%";
   end.style.visibility = "visible";
 }
 
 function game_end(){
+  end_text.innerHTML = "do you you want to restart?"
   next_button.style.visibility = "hidden";
   guess_button.style.visibility = "hidden";
   tjock.style.width = "100%";
   end.style.visibility = "visible";
+}
+
+function yes(){
+  if (random_array.length == pointer + 1 && fel != 0){
+    next_person()
+  }
+  else if(random_array.length == pointer + 1){
+    window.location.reload();
+
+  }
+
 }
 
 //vad som händer när man klickar på next knappen
@@ -128,7 +146,6 @@ function next_person() {
   }
   else  {
     pointer = pointer + 1
-    console.log(pointer)
     pic.src = images[getPointerVal(pointer)];
     display_results_text.style.visibility = "hidden";
     next_button.style.visibility = "hidden";
@@ -146,7 +163,9 @@ function restart(){
   display_results_text.style.visibility = "hidden";
   next_button.style.visibility = "hidden";
   guess_button.style.visibility = "visible";
-  fel = []
+  end.style.visibility = "hidden";
+  fel = [];
+  tjock.style.width = "0%" ;
 }
 
 function generate_array(length){
