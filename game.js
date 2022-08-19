@@ -6,7 +6,7 @@ var gamestate = "onging";
 var random = 1
 
 
-const images = ["personer/donald_trump.png",
+var images = ["personer/donald_trump.png",
   "personer/ryan_gosling.png",
   "personer/20220715_213252.jpg",
   "personer/Kirby.webp",
@@ -17,7 +17,7 @@ const images = ["personer/donald_trump.png",
   "personer/Michelangelo.jpeg",
   "personer/scrunkle.png"];
 
-  const people = ["Donald_Trump<donald_trump<donald<trump",
+  var people = ["Donald_Trump<donald_trump<donald<trump",
   "Ryan_Gosling<ryan_gosling<ryan<gosling",
   "Viktor_Rozman<viktor_rozman<viktor<rozman",
   "Kirby<kirby",
@@ -25,9 +25,12 @@ const images = ["personer/donald_trump.png",
   "Elon_Musk<elon_musk<elon<musk",
   "Felix_Kjellberg<felix_kjellberg<felix",
   "Jonas_Blom<jonas_blom<jonas<blom",
-  "personer/Michelangelo.jpeg",
+  "Turtle<turtle<michelangelo",
   "scrunkle<katt<banan_goblin"];
 
+  //images = ["personer/donald_trump.png","personer/ryan_gosling.png",];
+
+  //people = ["Donald_Trump<donald_trump<donald<trump","Ryan_Gosling<ryan_gosling<ryan<gosling",];
 
 var random_array = shuffle(generate_array(people.length))
 
@@ -40,7 +43,9 @@ const display_results_text = document.getElementById("results");
 const next_button = document.getElementById("next_person");
 const guess_button = document.getElementById("guess");
 const score_disp = document.getElementById("score");
+const tjock = document.getElementById("tjock");
 
+//tjock.style.width = "100%"
 // ser till att första bilden altid är rätt person
 pic.src = images[getPointerVal(pointer)]
 
