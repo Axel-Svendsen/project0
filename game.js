@@ -88,8 +88,11 @@ function clicked() {
 
   console.log(val);
 
-  if (random_array.length == pointer + 1){
+  if (random_array.length == pointer + 1 && fel != 0){
     game_over()  
+  }
+  else if(random_array.length == pointer + 1){
+    game_end()
   }
 
 }
@@ -97,6 +100,12 @@ function clicked() {
 function game_over(){
   next_button.innerHTML = "play again?"
   gamestate = "over"
+}
+
+function game_end(){
+  next_button.style.visibility = "hidden";
+  guess_button.style.visibility = "hidden";
+  
 }
 
 //vad som händer när man klickar på next knappen
