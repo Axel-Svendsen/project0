@@ -1,5 +1,6 @@
 var pointer = 0;
 var score = 0;
+var gamestate = "onging";
 
 // ändra denna för att sätta på eller stänga av random ordning 1 = random    0 = inte random
 var random = 1
@@ -21,8 +22,10 @@ const people = ["donald_trump<donald<trump",
   "elon_musk<elon<musk",
   "Felix_Kjellberg<felix<pewdi"];
 
-const random_array = shuffle(generate_array(people.length))
 
+var random_array = shuffle(generate_array(people.length))
+
+var fel = [];
 
 // definerar pointers till element i dokumentet (game.html)
 const inp = document.getElementById("inp");
@@ -50,6 +53,8 @@ function results(correct) {
     display_results_text.innerHTML = "Fel!";
     display_results_text.style = "color: red";
     console.log("fel");
+    fel.push(getPointerVal(pointer));
+    console.log(fel);
   }
 
   score_disp.innerHTML =  score
@@ -59,7 +64,7 @@ function results(correct) {
   inp.value = "";
 }
 
-// vad som händer när man klickar på test/gissa knaååen
+// vad som händer när man klickar på test/gissa knappen
 function clicked() {
 
 
@@ -80,19 +85,43 @@ function clicked() {
 
   console.log(val);
 
+  if (random_array.length == pointer + 1){
+    game_over()  
+  }
 
+}
 
+function game_over(){
+  next_button.innerHTML = "play again?"
+  gamestate = "over"
 }
 
 //vad som händer när man klickar på next knappen
 function next_person() {
-pointer = pointer + 1
-  console.log(pointer)
+  if (gamestate == "over"){
+    restart()
+  }
+  else  {
+    pointer = pointer + 1
+    console.log(pointer)
+    pic.src = images[getPointerVal(pointer)];
+    display_results_text.style.visibility = "hidden";
+    next_button.style.visibility = "hidden";
+    guess_button.style.visibility = "visible";
+
+  }
+}
+
+function restart(){
+  gamestate = "ongoing"
+  random_array = shuffle(fel)
+  pointer = 0
+  next_button.innerHTML = "next"
   pic.src = images[getPointerVal(pointer)];
   display_results_text.style.visibility = "hidden";
   next_button.style.visibility = "hidden";
   guess_button.style.visibility = "visible";
-
+  fel = []
 }
 
 function generate_array(length){
