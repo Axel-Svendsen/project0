@@ -110,7 +110,7 @@ function game_over(){
 function game_end(){
   next_button.style.visibility = "hidden";
   guess_button.style.visibility = "hidden";
-
+  
 }
 
 //vad som händer när man klickar på next knappen
