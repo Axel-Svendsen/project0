@@ -14,6 +14,11 @@
 
   <div style="width:100%; height:60px">
   </div>
+
+  <div style=" z-index: 1;" id="tjock">
+
+  </div>
+
   <div class="center">
     <h4 id="score">0</h4>
   </div>
@@ -28,6 +33,14 @@
     <h3 style="visibility: hidden" id="results"> TBD </h3>
     <button style="visibility: hidden" id="next_person" onclick="next_person()"> Next </button>
   </div>
-  
+  <div id="end" style="visibility:hidden;">
+    <div style="width:100%; height:20px;" ></div>
+    <p class="center" style="font-size: 60px;">insert result text depending on acquired points</p>
+    <p class="center" style="font-size: 30px;">Do you want to play again?</p> <!-- Change colour to white if not visible with black background -->
+    <div class="center">
+        <button id="" onclick=""> Yes </button>
+        <button id="" onclick=""> No </button>
+    </div>
+  </div>
   <script src="game.js"></script>
 </body>

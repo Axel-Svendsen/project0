@@ -6,7 +6,7 @@ var gamestate = "onging";
 var random = 1
 
 
-const images = ["personer/donald_trump.png",
+var images = ["personer/donald_trump.png",
   "personer/ryan_gosling.png",
   "personer/20220715_213252.jpg",
   "personer/Kirby.webp",
@@ -14,9 +14,10 @@ const images = ["personer/donald_trump.png",
   "personer/Elon_Musk_Smoke.webp",
   "personer/Felix_Kjellberg.jpeg",
   "personer/jonas_blom.png",
-  "personer/Michelangelo.jpeg"];
+  "personer/Michelangelo.jpeg",
+  "personer/scrunkle.png"];
 
-const people = ["Donald_Trump<donald_trump<donald<trump",
+  var people = ["Donald_Trump<donald_trump<donald<trump",
   "Ryan_Gosling<ryan_gosling<ryan<gosling",
   "Viktor_Rozman<viktor_rozman<viktor<rozman",
   "Kirby<kirby",
@@ -24,8 +25,13 @@ const people = ["Donald_Trump<donald_trump<donald<trump",
   "Elon_Musk<elon_musk<elon<musk",
   "Felix_Kjellberg<felix_kjellberg<felix",
   "Jonas_Blom<jonas_blom<jonas<blom",
-  "Michelangelo<mike<turtle"];
+  "Turtle<turtle<michelangelo",
+  "scrunkle<katt<banan_goblin"];
+  
 
+  images = ["personer/donald_trump.png","personer/ryan_gosling.png",];
+
+  people = ["Donald_Trump<donald_trump<donald<trump","Ryan_Gosling<ryan_gosling<ryan<gosling",];
 
 var random_array = shuffle(generate_array(people.length))
 
@@ -38,6 +44,8 @@ const display_results_text = document.getElementById("results");
 const next_button = document.getElementById("next_person");
 const guess_button = document.getElementById("guess");
 const score_disp = document.getElementById("score");
+const tjock = document.getElementById("tjock");
+const end = document.getElementById("end");
 
 // ser till att första bilden altid är rätt person
 pic.src = images[getPointerVal(pointer)]
@@ -88,15 +96,26 @@ function clicked() {
 
   console.log(val);
 
-  if (random_array.length == pointer + 1){
+  if (random_array.length == pointer + 1 && fel != 0){
     game_over()  
+  }
+  else if(random_array.length == pointer + 1){
+    game_end()
   }
 
 }
 
 function game_over(){
-  next_button.innerHTML = "play again?"
   gamestate = "over"
+  tjock.style.width = "100%";
+  end.style.visibility = "visible";
+}
+
+function game_end(){
+  next_button.style.visibility = "hidden";
+  guess_button.style.visibility = "hidden";
+  tjock.style.width = "100%";
+  end.style.visibility = "visible";
 }
 
 //vad som händer när man klickar på next knappen
