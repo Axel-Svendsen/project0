@@ -46,8 +46,7 @@ function results(correct) {
     score = score + 1;
   }
   else if (correct == 0) {
-
-    display_results_text.innerHTML = "Fel!";
+    display_results_text.innerHTML = people[getPointerVal(pointer)];
     display_results_text.style = "color: red";
     console.log("fel");
   }
