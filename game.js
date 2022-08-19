@@ -16,14 +16,14 @@ const images = ["personer/donald_trump.png",
   "personer/jonas_blom.png",
   "personer/scrunkle.png"];
 
-const people = ["donald_trump<donald<trump",
-  "ryan_gosling<ryan<gosling",
-  "viktor_rozman<viktor<rozman",
-  "kirby",
-  "spongebob<sponge_bob<svampbob<svamp_bob",
-  "elon_musk<elon<musk",
-  "Felix_Kjellberg<felix<pewdi",
-  "jonas_blom<jonas<Jonas<Jonas_Blom<Jonas_blom<hockey_spelare",
+  const people = ["Donald_Trump<donald_trump<donald<trump",
+  "Ryan_Gosling<ryan_gosling<ryan<gosling",
+  "Viktor_Rozman<viktor_rozman<viktor<rozman",
+  "Kirby<kirby",
+  "Spongebob<spongebob<sponge_bob<svampbob<svamp_bob",
+  "Elon_Musk<elon_musk<elon<musk",
+  "Felix_Kjellberg<felix_kjellberg<felix",
+  "Jonas_Blom<jonas_blom<jonas<blom",
   "scrunkle<katt<banan_goblin"];
 
 
@@ -53,7 +53,7 @@ function results(correct) {
     score = score + 1;
   }
   else if (correct == 0) {
-    display_results_text.innerHTML = people[getPointerVal(pointer)];
+    display_results_text.innerHTML = people[getPointerVal(pointer)].replace("_", " ");
     display_results_text.style = "color: red";
     console.log("fel");
     fel.push(getPointerVal(pointer));
