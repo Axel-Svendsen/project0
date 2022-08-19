@@ -25,7 +25,7 @@ const images = ["personer/donald_trump.png",
   "Elon_Musk<elon_musk<elon<musk",
   "Felix_Kjellberg<felix_kjellberg<felix",
   "Jonas_Blom<jonas_blom<jonas<blom",
-  "personer/Michelangelo.jpeg",
+  "Turtle<turtle<michelangelo",
   "scrunkle<katt<banan_goblin"];
 
 
@@ -107,7 +107,7 @@ function game_over(){
 function game_end(){
   next_button.style.visibility = "hidden";
   guess_button.style.visibility = "hidden";
-  
+
 }
 
 //vad som händer när man klickar på next knappen
