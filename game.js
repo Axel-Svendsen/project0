@@ -45,6 +45,7 @@ const guess_button = document.getElementById("guess");
 const score_disp = document.getElementById("score");
 const tjock = document.getElementById("tjock");
 
+//tjock.style.width = "100%"
 // ser till att första bilden altid är rätt person
 pic.src = images[getPointerVal(pointer)]
 
