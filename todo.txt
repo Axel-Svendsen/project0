@@ -1,13 +1,1 @@
-game:
-
-- visa rätt svar vid fel gissning
-- Absoluta positioner 
-- checkbox som ändrar random
-
-html/css:
-
-- Fixa main page logo - axel j fixar
-- offset på varje page (så navbar inte täcker)
-
-
-
+https://docs.google.com/document/d/1gcfpF3bXnIYZbXyxGg4Vm2neKYYB6iMNiSAWLNANQvs/edit
