@@ -32,7 +32,13 @@ canvas {
                 this.canvas.height = screen.availHeight - 130;
                 this.context = this.canvas.getContext("2d");
                 document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-                this.interval = setInterval(updateGameArea, 0);        
+                this.interval = setInterval(updateGameArea, 0);    
+                window.addEventListener('keydown', function (e) {
+                    myGameArea.key = e.keyCode;
+                })    
+                window.addEventListener('keyup', function (e) {
+                    myGameArea.key = false;
+                })
             },
             stop : function() {
                 clearInterval(this.interval);
@@ -43,7 +49,7 @@ canvas {
         }
         
         function component(width, height, color, x, y, type) {
-            if (KeyboardEvent.DOM_KEY_LOCATION_RIGHT){x += 10;}
+            if (KeyboardEvent.DOM_KEY_LOCATION_RIGHT){this.speedX = 10;}
             this.type = type;
             this.width = width;
             this.height = height;
@@ -74,6 +80,12 @@ canvas {
         
         function updateGameArea() {
             myGameArea.clear();
+            myGamePiece.speedX = 0;
+            myGamePiece.speedY = 0;
+            if (myGameArea.key && myGameArea.key == 37) {myGamePiece.speedX = -1; }
+            if (myGameArea.key && myGameArea.key == 39) {myGamePiece.speedX = 1; }
+            if (myGameArea.key && myGameArea.key == 38) {myGamePiece.speedY = -1; }
+            if (myGameArea.key && myGameArea.key == 40) {myGamePiece.speedY = 1; }
             myGamePiece.newPos();
             myGamePiece.update();
         }
