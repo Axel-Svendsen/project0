@@ -6,7 +6,7 @@ var gamestate = "onging";
 var random = 1
 
 
-var images = ["personer/donald_trump.png",
+/*var images = ["personer/donald_trump.png",
   "personer/ryan_gosling.png",
   "personer/20220715_213252.jpg",
   "personer/Kirby.webp",
@@ -27,10 +27,11 @@ var images = ["personer/donald_trump.png",
   "Jonas_Blom<jonas_blom<jonas<blom",
   "Turtle<turtle<michelangelo",
   "scrunkle<katt<banan_goblin"];
+  */
 
-  //images = ["personer/donald_trump.png","personer/ryan_gosling.png",];
+  images = ["personer/donald_trump.png","personer/ryan_gosling.png",];
 
-  //people = ["Donald_Trump<donald_trump<donald<trump","Ryan_Gosling<ryan_gosling<ryan<gosling",];
+  people = ["Donald_Trump<donald_trump<donald<trump","Ryan_Gosling<ryan_gosling<ryan<gosling",];
 
 var random_array = shuffle(generate_array(people.length))
 
@@ -45,7 +46,6 @@ const guess_button = document.getElementById("guess");
 const score_disp = document.getElementById("score");
 const tjock = document.getElementById("tjock");
 
-//tjock.style.width = "100%"
 // ser till att första bilden altid är rätt person
 pic.src = images[getPointerVal(pointer)]
 
@@ -107,12 +107,13 @@ function clicked() {
 function game_over(){
   next_button.innerHTML = "play again?"
   gamestate = "over"
+  tjock.style.width = "100%";
 }
 
 function game_end(){
   next_button.style.visibility = "hidden";
   guess_button.style.visibility = "hidden";
-  
+  tjock.style.width = "100%";
 }
 
 //vad som händer när man klickar på next knappen
