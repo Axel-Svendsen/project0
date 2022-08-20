@@ -114,6 +114,7 @@ function clicked() {
 
 
 function game_over(){
+  end.style.left = "13%";
   end_text.innerHTML = "do you want to play again with the ones you missed?"
   gamestate = "over"
   tjock.style.width = "100%";
@@ -121,6 +122,7 @@ function game_over(){
 }
 
 function game_end(){
+  end.style.left = "31%";
   end_text.innerHTML = "do you you want to restart?"
   next_button.style.visibility = "hidden";
   guess_button.style.visibility = "hidden";
