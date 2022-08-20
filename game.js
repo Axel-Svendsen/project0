@@ -102,7 +102,7 @@ function clicked() {
 
   console.log(val);
 
-  if (random_array.length == pointer + 1 && fel != 0){
+  if (random_array.length == pointer + 1 && fel.length != 0){
     game_over()  
   }
   else if(random_array.length == pointer + 1){
@@ -129,7 +129,7 @@ function game_end(){
 }
 
 function yes(){
-  if (random_array.length == pointer + 1 && fel != 0){
+  if (random_array.length == pointer + 1 && fel.length != 0){
     next_person()
   }
   else if(random_array.length == pointer + 1){
