@@ -131,7 +131,7 @@ function clicked() {
 
 }
 
-
+// 2 Situationer som utspelas efter du har gissat på alla svaren baserat på hur mång rätt du fick
 function game_over(){
   end_text_score.innerHTML = `You got ${score} out of ${people.length} correct!`
   end_text_message.innerHTML = "Do you want to try again with the answers you got wrong?"
@@ -175,6 +175,7 @@ function next_person() {
   }
 }
 
+// restart funktion för att starta om spelet
 function restart(){
   gamestate = "ongoing"
   random_array = shuffle(fel)
