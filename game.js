@@ -19,7 +19,6 @@ var images = [
   "personer/jack-blomquist.jpeg",
   "personer/joel-lundhag.jpeg",
   "personer/jonas-olanders.jpeg",
-  "personer/Michelangelo.jpeg",
   "personer/linus-gamborn.jpeg",
   "personer/linus-eriksson.jpeg",
   "personer/nichlas-jensen.jpeg",
@@ -27,6 +26,8 @@ var images = [
   "personer/simon-liander.jpeg",
   "personer/viktor-rozman.jpeg",
   "personer/viktor-söderborg.jpeg",
+  "personer/daniel_berg.jpeg",
+  "personer/ola_lindberg",
 ];
 
   var people = [
@@ -39,16 +40,17 @@ var images = [
     "Frans_Karlsson<frans_karlsson<frans<karlsson",
     "Isac_Ekeroth<isac_ekeroth<isac<ekeroth",
     "Jack_Blomquist<jack_blomquist<jack<blomquist",
-    "Joel_Lundhag<joel_lundhag<joel<lundhag",
+    "Joel_Lundhag<joel_lundhag<daniel<daniel_lundhag<joel<lundhag",
     "Jonas_Olanders<jonas_olanders<jonas<olanders",
-    "Turtle<turtle<mike<Mike<Michelangelo",
     "Linus_Gamborn<linus_gamborn<linus<gamborn",
     "Linus_Eriksson<linus_eriksson<linus<eriksson",
     "Nichlas_Jensen<nichlas_jensen<nichlas<jensen",
     "Sebastian_Martinsson<sebastian_martinsson<sebastian<martinsson",
     "Simon_Liander<simon_liander<simon<liander",
     "Viktor_Rozman<viktor_rozman<viktor<rozman",
-    "Viktor_Söderborg<viktor_söderborg<viktor<söderborg"
+    "Viktor_Söderborg<viktor_söderborg<viktor<söderborg",
+    "Ola_Lindberg<ola_lindberg<ola<lindberg",
+    "Daniel_Berg<daniel_berg<daniel<berg"
   ];
 
 
