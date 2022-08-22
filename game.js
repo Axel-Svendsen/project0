@@ -40,7 +40,7 @@ var images = [
     "Frans_Karlsson<frans_karlsson<frans<karlsson",
     "Isac_Ekeroth<isac_ekeroth<isac<ekeroth",
     "Jack_Blomquist<jack_blomquist<jack<blomquist",
-    "Joel_Lundhag<joel_lundhag<daniel<daniel_lundhag<joel<lundhag",
+    "Daniel_(Joel)_Lundhag<joel_lundhag<daniel<daniel_lundhag<joel<lundhag",
     "Jonas_Olanders<jonas_olanders<jonas<olanders",
     "Linus_Gamborn<linus_gamborn<linus<gamborn",
     "Linus_Eriksson<linus_eriksson<linus<eriksson",
@@ -83,13 +83,13 @@ function results(correct) {
 
   if (correct == 1) {
 
-    display_results_text.innerHTML = `Correct! It was ${people[getPointerVal(pointer)].replace("_", " ")}`;
+    display_results_text.innerHTML = `Correct! It was ${people[getPointerVal(pointer)].replaceAll("_", " ")}`;
     display_results_text.style = "color: green";
     console.log("correct");
     score = score + 1;
   }
   else if (correct == 0) {
-    display_results_text.innerHTML = `Incorrect! It was ${people[getPointerVal(pointer)].replace("_", " ")}`;
+    display_results_text.innerHTML = `Incorrect! It was ${people[getPointerVal(pointer)].replaceAll("_", " ")}`;
     display_results_text.style = "color: red";
     console.log("incorrect");
     fel.push(getPointerVal(pointer));
