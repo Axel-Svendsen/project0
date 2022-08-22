@@ -72,7 +72,7 @@ function keyUpHandler(e) {
             this.speedY = 0;    
             this.gravity = 0.05;
             this.gravitySpeed = 0;
-            this.bounce = 0.8;
+            this.bounce = 0.5;
             this.update = function() {
                 ctx = myGameArea.context;
                 ctx.fillStyle = color;
@@ -100,9 +100,9 @@ function keyUpHandler(e) {
             myGamePiece.speedY = 0;
             if (myGameArea.key == 68) {myGamePiece.speedX = 1; }
             if (myGameArea.key == 65) {myGamePiece.speedX = -1; }
-            if (myGameArea.key == 87 && myGamePiece.y > 735) {myGamePiece.gravitySpeed = -4}
-            if (myGameArea.key == 87) {myGamePiece.bounce = 0.8}
-            if (myGameArea.key == 83) {myGamePiece.bounce = 0.3}
+            if (myGameArea.key == 87 && myGamePiece.y > 735) {myGamePiece.gravitySpeed = -8}
+            if (myGameArea.key == 87) {myGamePiece.bounce = 0.5}
+            if (myGameArea.key == 83) {myGamePiece.bounce = 0.2}
 
             
 
