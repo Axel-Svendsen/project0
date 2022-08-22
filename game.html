@@ -12,27 +12,27 @@
 
 <body>
   <div id="person"></div>
-  <div style="width:100%; height:60px">
-  </div>
-
   <div style=" z-index: 1;" id="tjock">
 
   </div>
 
-  <div class="center">
-    <h4 id="score">0</h4>
+  <div id="game-window">
+    <div class="center">
+      <h4 id="score">0</h4>
+    </div>
+    <div class="center">
+      <img id="bild" src="">
+    </div>
+    <div class="center">
+      <input id="inp" type="text" autocomplete="off">
+      <button id="guess" onclick="clicked()"> Guess </button>
+    </div>
+    <div class="center">
+      <h3 style="visibility: hidden" id="results"> TBD </h3>
+      <button style="visibility: hidden" id="next_person" onclick="next_person()"> Next </button>
+    </div>
   </div>
-  <div class="center">
-    <img id="bild" src="">
-  </div>
-  <div class="center">
-    <input id="inp" type="text">
-    <button id="guess" onclick="clicked()"> Guess </button>
-  </div>
-  <div class="center">
-    <h3 style="visibility: hidden" id="results"> TBD </h3>
-    <button style="visibility: hidden" id="next_person" onclick="next_person()"> Next </button>
-  </div>
+  
   <div id="end" style="visibility:hidden;">
     <div style="width:100%; height:20px;" ></div>
     <h3 id="end_text" class="center" style="font-size: 60px;">insert result text depending on acquired points</h3>
