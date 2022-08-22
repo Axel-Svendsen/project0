@@ -79,13 +79,13 @@ function results(correct) {
 
   if (correct == 1) {
 
-    display_results_text.innerHTML = "Rätt!";
+    display_results_text.innerHTML = `Rätt! Det var ${people[getPointerVal(pointer)].replace("_", " ")}`;
     display_results_text.style = "color: green";
     console.log("rätt");
     score = score + 1;
   }
   else if (correct == 0) {
-    display_results_text.innerHTML = people[getPointerVal(pointer)].replace("_", " ");
+    display_results_text.innerHTML = `Fel! Det var ${people[getPointerVal(pointer)].replace("_", " ")}`;
     display_results_text.style = "color: red";
     console.log("fel");
     fel.push(getPointerVal(pointer));
