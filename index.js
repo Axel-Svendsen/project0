@@ -11,7 +11,7 @@ template.innerHTML = `
         <a class="nav-link" href="/game.html">Game<span class="sr-only"></span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/about.html">Hur spelar man?   <span class="sr-only"></span></a>
+        <a class="nav-link" href="/about.html">How to play?   <span class="sr-only"></span></a>
       </li>
     </ul>
   </div>
