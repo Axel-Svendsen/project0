@@ -42,7 +42,11 @@ var images = [
     "Jonas_Olanders<jonas_olanders<jonas<olanders",
     "Linus_Gamborn<linus_gamborn<linus<gamborn",
     "Linus_Eriksson<linus_eriksson<linus<eriksson",
-    ""
+    "Nichlas_Jensen<nichlas_jensen<nichlas<jensen",
+    "Sebastian_Martinsson<sebastian_martinsson<sebastian<martinsson",
+    "Simon_Liander<simon_liander<simon<liander",
+    "Viktor_Rozman<viktor_rozman<viktor<rozman",
+    "Viktor_Söderborg<viktor_söderborg<viktor<söderborg"
   ];
 
 
