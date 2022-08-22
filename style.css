@@ -26,8 +26,11 @@ html, body {
 #end {
   z-index: 2;
   position: absolute;
-  left : 31%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color : rgba(255, 255, 255, 0.3);
   border-radius: 10px;
   height: 250px;
+  width: 1000px;
 }
