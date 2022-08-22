@@ -43,12 +43,6 @@ canvas {
                     myGameArea.key = false;
                 })
                 function keyDownHandler(e) {
-    if(e.key == "Right" || e.key == "ArrowRight") {
-        rightPressed = true;
-    }
-    else if(e.key == "Left" || e.key == "ArrowLeft") {
-        leftPressed = true;
-    }
 }
 
 function keyUpHandler(e) {
@@ -106,9 +100,11 @@ function keyUpHandler(e) {
             myGamePiece.speedY = 0;
             if (myGameArea.key == 68) {myGamePiece.speedX = 1; }
             if (myGameArea.key == 65) {myGamePiece.speedX = -1; }
-            if (myGameArea.key == 87) {myGamePiece.gravitySpeed = -2}
+            if (myGameArea.key == 87 && y > myGameArea.canvas - 200) {myGamePiece.gravitySpeed = -4}
             if (myGameArea.key == 87) {myGamePiece.bounce = 0.8}
             if (myGameArea.key == 83) {myGamePiece.bounce = 0.3}
+
+            
 
             // w=87, s=83, d=68, a=65
             //if (myGameArea.key == 39) {myGamePiece.speedX = 1; }
