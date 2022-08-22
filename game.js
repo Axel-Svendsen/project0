@@ -81,15 +81,15 @@ function results(correct) {
 
   if (correct == 1) {
 
-    display_results_text.innerHTML = `Rätt! Det var ${people[getPointerVal(pointer)].replace("_", " ")}`;
+    display_results_text.innerHTML = `Correct! It was ${people[getPointerVal(pointer)].replace("_", " ")}`;
     display_results_text.style = "color: green";
-    console.log("rätt");
+    console.log("correct");
     score = score + 1;
   }
   else if (correct == 0) {
-    display_results_text.innerHTML = `Fel! Det var ${people[getPointerVal(pointer)].replace("_", " ")}`;
+    display_results_text.innerHTML = `Incorrect! It was ${people[getPointerVal(pointer)].replace("_", " ")}`;
     display_results_text.style = "color: red";
-    console.log("fel");
+    console.log("incorrect");
     fel.push(getPointerVal(pointer));
     console.log(fel);
   }
