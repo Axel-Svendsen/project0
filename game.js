@@ -27,7 +27,7 @@ var images = [
   "personer/viktor-rozman.jpeg",
   "personer/viktor-söderborg.jpeg",
   "personer/daniel_berg.jpeg",
-  "personer/ola_lindberg",
+  "personer/ola_lindberg.jpeg",
 ];
 
   var people = [
@@ -49,8 +49,8 @@ var images = [
     "Simon_Liander<simon_liander<simon<liander",
     "Viktor_Rozman<viktor_rozman<viktor<rozman",
     "Viktor_Söderborg<viktor_söderborg<viktor<söderborg",
-    "Ola_Lindberg<ola_lindberg<ola<lindberg",
-    "Daniel_Berg<daniel_berg<daniel<berg"
+    "Daniel_Berg<daniel_berg<daniel<berg",
+    "Ola_Lindberg<ola_lindberg<ola<lindberg"
   ];
 
 
