@@ -17,8 +17,8 @@ canvas {
 
         var myGamePiece;
 
-        var x = 30;
-        var y = 30;
+        var x = screen.availWidth/2 - 20;
+        var y = 740;
         
 
 
@@ -100,7 +100,7 @@ function keyUpHandler(e) {
             myGamePiece.speedY = 0;
             if (myGameArea.key == 68) {myGamePiece.speedX = 1; }
             if (myGameArea.key == 65) {myGamePiece.speedX = -1; }
-            if (myGameArea.key == 87 && myGamePiece.y > 735) {myGamePiece.gravitySpeed = -8}
+            if (myGameArea.key == 87 && myGamePiece.y > 735) {myGamePiece.gravitySpeed = -5}
             if (myGameArea.key == 87) {myGamePiece.bounce = 0.5}
             if (myGameArea.key == 83) {myGamePiece.bounce = 0.2}
 
