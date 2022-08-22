@@ -7,31 +7,47 @@ var gamestate = "onging";
 var random = 1
 
 
-var images = ["personer/donald_trump.png",
-  "personer/ryan_gosling.png",
-  "personer/20220715_213252.jpg",
-  "personer/Kirby.webp",
-  "personer/Spongebob.png",
-  "personer/Elon_Musk_Smoke.webp",
-  "personer/Felix_Kjellberg.jpeg",
-  "personer/jonas_blom.png",
+var images = [
+  "personer/alexander-fransson.jpeg",
+  "personer/alexander-gudmundsson.jpeg",
+  "personer/axel-jobson.jpeg",
+  "personer/axel-svendsen.jpeg",
+  "personer/daniel-ljung.jpeg",
+  "personer/eric-dahlgren.jpeg",
+  "personer/frans-karlsson.jpeg",
+  "personer/isac-ekeroth.jpeg",
+  "personer/jack-blomquist.jpeg",
+  "personer/joel-lundhag.jpeg",
+  "personer/jonas-olanders.jpeg",
+  "personer/linu-gamborn.jpeg",
+  "personer/linus-eriksson.jpeg",
+  "personer/nichlas-jensen.jpeg",
+  "personer/sebastian-martinsson.jpeg",
+  "personer/simon-liander.jpeg",
+  "personer/viktor-rozman.jpeg",
+  "personer/viktor-söderborg.jpeg",
+  "personer/donald_trump.png",
+  "personer/Kriby.webp",
   "personer/Michelangelo.jpeg",
-  "personer/scrunkle.png"];
+];
 
-  var people = ["Donald_Trump<donald_trump<donald<trump",
-  "Ryan_Gosling<ryan_gosling<ryan<gosling",
-  "Viktor_Rozman<viktor_rozman<viktor<rozman",
-  "Kirby<kirby",
-  "Spongebob<spongebob<sponge_bob<svampbob<svamp_bob",
-  "Elon_Musk<elon_musk<elon<musk",
-  "Felix_Kjellberg<felix_kjellberg<felix",
-  "Jonas_Blom<jonas_blom<jonas<blom",
-  "Turtle<turtle<michelangelo",
-  "scrunkle<katt<banan_goblin"];
+  var people = [
+    "Alexander_Fransson<alexander_fransson<alexander<fransson",
+    "Alexander_Gudmundsson<alexander_gudmundsson<alexander<gudmundsson",
+    "Axel_Jobson<axel_jobson<axel<jobson",
+    "Axel_Svendsen<axel_svendsen<axel<svendsen",
+    "Daniel_Ljung<daniel_ljung<daniel<ljung",
+    "Eric_Dahlgren<eric<dahlgren<eric<dahlgren",
+    "Frans_Karlsson<frans_karlsson<frans<karlsson",
+    "Isac_Ekeroth<isac_ekeroth<isac<ekeroth",
+    "Jack_Blomquist<jack_blomquist<jack<blomquist",
+    "Joel_Lundhag<joel_lundhag<joel<lundhag",
+    "Jonas_Olanders<jonas_olanders<jonas<olanders",
+    "Linus_Gamborn<linus_gamborn<linus<gamborn",
+    "Linus_Eriksson<linus_eriksson<linus<eriksson",
+    ""
+  ];
 
-  images = ["personer/donald_trump.png","personer/ryan_gosling.png",];
-
-  people = ["Donald_Trump<donald_trump<donald<trump","Ryan_Gosling<ryan_gosling<ryan<gosling",];
 
 var random_array = shuffle(generate_array(people.length))
 
