@@ -47,7 +47,8 @@ const score_disp = document.getElementById("score");
 const tjock = document.getElementById("tjock");
 const end = document.getElementById("end");
 const display_list_length = document.getElementById("person");
-const end_text = document.getElementById("end_text");
+const end_text_score = document.getElementById("end_text_score");
+const end_text_message = document.getElementById("end_text_message");
 
 display_list_length.innerHTML = people.length;
 
@@ -114,14 +115,16 @@ function clicked() {
 
 
 function game_over(){
-  end_text.innerHTML = "do you want to play again with the ones you missed?"
+  end_text_score.innerHTML = `You got ${score} out of ${people.length} correct!`
+  end_text_message.innerHTML = "Do you want to try again with the answers you got wrong?"
   gamestate = "over"
   tjock.style.width = "100%";
   end.style.visibility = "visible";
 }
 
 function game_end(){
-  end_text.innerHTML = "do you you want to restart?"
+  end_text_score.innerHTML = `Well done you got everyone correct!`
+  end_text_message.innerHTML = "Do you want to play again?"
   next_button.style.visibility = "hidden";
   guess_button.style.visibility = "hidden";
   tjock.style.width = "100%";
