@@ -19,16 +19,13 @@ var images = [
   "personer/jack-blomquist.jpeg",
   "personer/joel-lundhag.jpeg",
   "personer/jonas-olanders.jpeg",
-  "personer/linu-gamborn.jpeg",
+  "personer/linus-gamborn.jpeg",
   "personer/linus-eriksson.jpeg",
   "personer/nichlas-jensen.jpeg",
   "personer/sebastian-martinsson.jpeg",
   "personer/simon-liander.jpeg",
   "personer/viktor-rozman.jpeg",
   "personer/viktor-söderborg.jpeg",
-  "personer/donald_trump.png",
-  "personer/Kriby.webp",
-  "personer/Michelangelo.jpeg",
 ];
 
   var people = [
