@@ -113,7 +113,6 @@ function clicked() {
 }
 
 
-
 function game_over(){
   end_text_score.innerHTML = `You got ${score} out of ${people.length} correct!`
   end_text_message.innerHTML = "Do you want to try again with the answers you got wrong?"
