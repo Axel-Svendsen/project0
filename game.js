@@ -19,7 +19,6 @@ var images = [
   "personer/jack-blomquist.jpeg",
   "personer/joel-lundhag.jpeg",
   "personer/jonas-olanders.jpeg",
-  "personer/Michelangelo.jpeg",
   "personer/linus-gamborn.jpeg",
   "personer/linus-eriksson.jpeg",
   "personer/nichlas-jensen.jpeg",
@@ -27,6 +26,8 @@ var images = [
   "personer/simon-liander.jpeg",
   "personer/viktor-rozman.jpeg",
   "personer/viktor-söderborg.jpeg",
+  "personer/daniel_berg.jpeg",
+  "personer/ola_lindberg.jpeg",
 ];
 
   var people = [
@@ -39,16 +40,17 @@ var images = [
     "Frans_Karlsson<frans_karlsson<frans<karlsson",
     "Isac_Ekeroth<isac_ekeroth<isac<ekeroth",
     "Jack_Blomquist<jack_blomquist<jack<blomquist",
-    "Joel_Lundhag<joel_lundhag<joel<lundhag",
+    "Joel_Lundhag<joel_lundhag<daniel<daniel_lundhag<joel<lundhag",
     "Jonas_Olanders<jonas_olanders<jonas<olanders",
-    "Turtle<turtle<mike<Mike<Michelangelo",
     "Linus_Gamborn<linus_gamborn<linus<gamborn",
     "Linus_Eriksson<linus_eriksson<linus<eriksson",
     "Nichlas_Jensen<nichlas_jensen<nichlas<jensen",
     "Sebastian_Martinsson<sebastian_martinsson<sebastian<martinsson",
     "Simon_Liander<simon_liander<simon<liander",
     "Viktor_Rozman<viktor_rozman<viktor<rozman",
-    "Viktor_Söderborg<viktor_söderborg<viktor<söderborg"
+    "Viktor_Söderborg<viktor_söderborg<viktor<söderborg",
+    "Daniel_Berg<daniel_berg<daniel<berg",
+    "Ola_Lindberg<ola_lindberg<ola<lindberg"
   ];
 
 
@@ -81,15 +83,15 @@ function results(correct) {
 
   if (correct == 1) {
 
-    display_results_text.innerHTML = "Rätt!";
+    display_results_text.innerHTML = `Correct! It was ${people[getPointerVal(pointer)].replace("_", " ")}`;
     display_results_text.style = "color: green";
-    console.log("rätt");
+    console.log("correct");
     score = score + 1;
   }
   else if (correct == 0) {
-    display_results_text.innerHTML = people[getPointerVal(pointer)].replace("_", " ");
+    display_results_text.innerHTML = `Incorrect! It was ${people[getPointerVal(pointer)].replace("_", " ")}`;
     display_results_text.style = "color: red";
-    console.log("fel");
+    console.log("incorrect");
     fel.push(getPointerVal(pointer));
     console.log(fel);
   }
@@ -131,7 +133,7 @@ function clicked() {
 
 }
 
-
+// 2 Situationer som utspelas efter du har gissat på alla svaren baserat på hur mång rätt du fick
 function game_over(){
   end_text_score.innerHTML = `You got ${score} out of ${people.length} correct!`
   end_text_message.innerHTML = "Do you want to try again with the answers you got wrong?"
@@ -175,6 +177,7 @@ function next_person() {
   }
 }
 
+// restart funktion för att starta om spelet
 function restart(){
   gamestate = "ongoing"
   random_array = shuffle(fel)
