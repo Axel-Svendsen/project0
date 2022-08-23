@@ -4,6 +4,7 @@ var score = 0;
 var gamestate = "onging";
 
 // ändra denna för att sätta på eller stänga av random ordning 1 = random    0 = inte random
+// ändra inte! kommer inte funka
 var random = 1
 
 
@@ -137,6 +138,8 @@ function clicked() {
 }
 
 // 2 Situationer som utspelas efter du har gissat på alla svaren baserat på hur mång rätt du fick
+
+// vad som händer när man inte har alla rätt
 function game_over(){
   end_text_score.innerHTML = `You got ${score} out of ${people.length} correct!`
   end_text_message.innerHTML = "Do you want to try again with the answers you got wrong?"
@@ -145,6 +148,7 @@ function game_over(){
   end.style.visibility = "visible";
 }
 
+// vad som händer när man har alla rätt
 function game_end(){
   end_text_score.innerHTML = `Well done you got everyone correct!`
   end_text_message.innerHTML = "Do you want to play again?"
@@ -154,6 +158,7 @@ function game_end(){
   end.style.visibility = "visible";
 }
 
+//vad som händer när man klickar "yes" på slut screenen
 function yes(){
   if (random_array.length == pointer + 1 && fel.length != 0){
     next_person()
@@ -195,6 +200,7 @@ function restart(){
   tjock.style.width = "0%" ;
 }
 
+// genererar en array med siffrorna 0 till length-1
 function generate_array(length){
   var arr = [];
   x = 0;
@@ -205,7 +211,8 @@ function generate_array(length){
   return arr;
 
 }
-
+// ett translation layer mellan den riktiga index och vad vi indedxar med
+// används för att få en random ordning på bilderna
 function getPointerVal(pointer){
   if (random == 1){
     return random_array[pointer];
@@ -234,7 +241,7 @@ function shuffle(array) {
   return array;
 }
 
-
+// lyssna efter enter och klicka rätt knapp beroende på vilka knappar syns 
 document.addEventListener("keyup", function(event) {
   if (event.key === "Enter") {
     if (guess_button.style.visibility == "visible"){
