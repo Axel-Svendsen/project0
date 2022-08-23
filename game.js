@@ -4,6 +4,7 @@ var score = 0;
 var gamestate = "onging";
 
 // ändra denna för att sätta på eller stänga av random ordning 1 = random    0 = inte random
+// ändra inte! kommer inte funka
 var random = 1
 
 
@@ -40,7 +41,7 @@ var images = [
     "Frans_Karlsson<frans_karlsson<frans<karlsson",
     "Isac_Ekeroth<isac_ekeroth<isac<ekeroth",
     "Jack_Blomquist<jack_blomquist<jack<blomquist",
-    "Joel_Lundhag<joel_lundhag<daniel<daniel_lundhag<joel<lundhag",
+    "Daniel_(Joel)_Lundhag<joel_lundhag<daniel<daniel_lundhag<joel<lundhag",
     "Jonas_Olanders<jonas_olanders<jonas<olanders",
     "Linus_Gamborn<linus_gamborn<linus<gamborn",
     "Linus_Eriksson<linus_eriksson<linus<eriksson",
@@ -71,10 +72,13 @@ const display_list_length = document.getElementById("person");
 const end_text_score = document.getElementById("end_text_score");
 const end_text_message = document.getElementById("end_text_message");
 
+
 display_list_length.innerHTML = people.length;
 
 // ser till att första bilden altid är rätt person
 pic.src = images[getPointerVal(pointer)]
+
+guess_button.style.visibility = "visible";
 
 
 
@@ -83,13 +87,13 @@ function results(correct) {
 
   if (correct == 1) {
 
-    display_results_text.innerHTML = `Correct! It was ${people[getPointerVal(pointer)].replace("_", " ")}`;
+    display_results_text.innerHTML = `Correct! It was ${people[getPointerVal(pointer)].replaceAll("_", " ")}`;
     display_results_text.style = "color: green";
     console.log("correct");
     score = score + 1;
   }
   else if (correct == 0) {
-    display_results_text.innerHTML = `Incorrect! It was ${people[getPointerVal(pointer)].replace("_", " ")}`;
+    display_results_text.innerHTML = `Incorrect! It was ${people[getPointerVal(pointer)].replaceAll("_", " ")}`;
     display_results_text.style = "color: red";
     console.log("incorrect");
     fel.push(getPointerVal(pointer));
@@ -134,6 +138,8 @@ function clicked() {
 }
 
 // 2 Situationer som utspelas efter du har gissat på alla svaren baserat på hur mång rätt du fick
+
+// vad som händer när man inte har alla rätt
 function game_over(){
   end_text_score.innerHTML = `You got ${score} out of ${people.length} correct!`
   end_text_message.innerHTML = "Do you want to try again with the answers you got wrong?"
@@ -142,6 +148,7 @@ function game_over(){
   end.style.visibility = "visible";
 }
 
+// vad som händer när man har alla rätt
 function game_end(){
   end_text_score.innerHTML = `Well done you got everyone correct!`
   end_text_message.innerHTML = "Do you want to play again?"
@@ -151,6 +158,7 @@ function game_end(){
   end.style.visibility = "visible";
 }
 
+//vad som händer när man klickar "yes" på slut screenen
 function yes(){
   if (random_array.length == pointer + 1 && fel.length != 0){
     next_person()
@@ -192,6 +200,7 @@ function restart(){
   tjock.style.width = "0%" ;
 }
 
+// genererar en array med siffrorna 0 till length-1
 function generate_array(length){
   var arr = [];
   x = 0;
@@ -202,7 +211,8 @@ function generate_array(length){
   return arr;
 
 }
-
+// ett translation layer mellan den riktiga index och vad vi indedxar med
+// används för att få en random ordning på bilderna
 function getPointerVal(pointer){
   if (random == 1){
     return random_array[pointer];
@@ -230,3 +240,16 @@ function shuffle(array) {
 
   return array;
 }
+
+// lyssna efter enter och klicka rätt knapp beroende på vilka knappar syns 
+document.addEventListener("keyup", function(event) {
+  if (event.key === "Enter") {
+    if (guess_button.style.visibility == "visible"){
+      clicked()
+    }
+    else {
+      next_person()
+    }
+    
+  }
+});

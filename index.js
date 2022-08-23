@@ -1,5 +1,5 @@
 const template = document.createElement('template');
-
+//Navbar for all pages
 template.innerHTML = `
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <div class="" id="navbarSupportedContent">
