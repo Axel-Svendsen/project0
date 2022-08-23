@@ -72,6 +72,7 @@ const display_list_length = document.getElementById("person");
 const end_text_score = document.getElementById("end_text_score");
 const end_text_message = document.getElementById("end_text_message");
 
+score_disp.innerHTML = `${score}/${people.length}`
 
 display_list_length.innerHTML = people.length;
 
@@ -100,7 +101,7 @@ function results(correct) {
     console.log(fel);
   }
 
-  score_disp.innerHTML =  score
+  score_disp.innerHTML = `${score}/${random_array.length}`
   display_results_text.style.visibility = "visable";
   next_button.style.visibility = "visible";
   guess_button.style.visibility = "hidden";
