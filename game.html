@@ -10,28 +10,26 @@
 
 <body>
   <div id="person"></div>
-  <div style=" z-index: 1;" id="tjock">
+  <div style=" z-index: 1;" id="tjock"></div>
 
-  </div>
-
-  <div id="game-window">
-    <div class="center">
+  <div id="game-window"> <!-- Game interface -->
+    <div class="center"> <!-- Score -->
       <h4 id="score">0</h4>
     </div>
-    <div class="center">
-      <img id="bild" src="">
+    <div class="center"> <!-- Picture that has the person youre guessing -->
+      <img id="bild" src=""> 
     </div>
-    <div class="Padding1">
+    <div class="Padding1"> <!-- Input for name and guess button -->
       <input id="inp" type="text" autocomplete="off">
       <button id="guess" onclick="clicked()"> Guess </button>
     </div>
-    <div class="center">
+    <div class="center"> <!-- Hidden buttons until you guess, shows if correct or incorrect and continue button -->
       <h3 style="visibility: hidden" id="results"> TBD </h3>
       <button style="visibility: hidden" id="next_person" onclick="next_person()"> Next </button>
     </div>
   </div>
   
-  <div id="end" style="visibility:hidden;">
+  <div id="end" style="visibility:hidden;"> <!-- Hidden element that reveals once finished guessing all of the pictures. Shows your result and if you want to try again or return to menu -->
     <div style="width:100%; height:20px;" ></div>
     <h3 id="end_text_score" class="center" style="font-size: 60px;">Result</h3>
     <h3 id="end_text_message" class="center" style="font-size: 30px;">Filler</h3>
@@ -41,9 +39,6 @@
         <button id="" onclick=""> No </button>
         </a>
       </div>
-
-   
-   
   </div>
 
   
