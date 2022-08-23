@@ -14,8 +14,17 @@ canvas {
     <script>
 
         
+        var rightPressed = false;
+        var leftPressed = false;
+        var upPressed = false;
+        var downPressed = false;
+        var wPressed = false;
+        var sPressed = false;
+        var aPressed = false;
+        var dPressed = false;
 
         var myGamePiece;
+        var myGamePiece2;
 
         var x = screen.availWidth/2 - 20;
         var y = 650;
@@ -25,6 +34,7 @@ canvas {
         
         function startGame() {
             myGamePiece = new component(30, 30, "red", x, y);
+            myGamePiece2 = new component(30, 30, "blue", x, y);
             myGameArea.start();
         }
         
@@ -36,6 +46,10 @@ canvas {
                 this.context = this.canvas.getContext("2d");
                 document.body.insertBefore(this.canvas, document.body.childNodes[0]);
                 this.interval = setInterval(updateGameArea, 0);    
+                
+
+
+                /*
                 window.addEventListener('keydown', function (e) {
                     myGameArea.key = e.keyCode;
                 })    
@@ -43,7 +57,7 @@ canvas {
                     myGameArea.key = false;
                 })
                 function keyDownHandler(e) {
-}
+} */
             },
             stop : function() {
                 clearInterval(this.interval);
@@ -51,6 +65,7 @@ canvas {
             clear : function() {
                 this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
             }
+            
         }
         
         function component(width, height, color, x, y, type) {
@@ -86,19 +101,90 @@ canvas {
         
         function updateGameArea() {
             myGameArea.clear();
-            
+
+
+                document.addEventListener("keydown", keyDownHandler, false);
+                document.addEventListener("keyup", keyUpHandler, false);
+
+                function keyDownHandler(e) {
+                    if(e.key == "Right" || e.key == "ArrowRight") {
+                        rightPressed = true;
+                    }
+                    if(e.key == "Left" || e.key == "ArrowLeft") {
+                        leftPressed = true;
+                    }
+                    if(e.key == "Up" || e.key == "ArrowUp") {
+                        upPressed = true;
+                    }
+                    if(e.key == "Down" || e.key == "ArrowDown") {
+                        downPressed = true;
+                    }
+
+                    if(e.key == "w" || e.key == "W") {
+                        wPressed = true;
+                    }
+                    if(e.key == "s" || e.key == "S") {
+                        sPressed = true;
+                    }
+                    if(e.key == "d" || e.key == "D") {
+                        dPressed = true;
+                    }
+                    if(e.key == "a" || e.key == "A") {
+                        aPressed = true;
+                    }
+                }
+
+                function keyUpHandler(e) {
+                    if(e.key == "Right" || e.key == "ArrowRight") {
+                        rightPressed = false;
+                    }
+                    if(e.key == "Left" || e.key == "ArrowLeft") {
+                        leftPressed = false;
+                    }
+                    if(e.key == "Up" || e.key == "ArrowUp") {
+                        upPressed = false;
+                    }
+                    if(e.key == "Down" || e.key == "ArrowDown") {
+                        downPressed = false;
+                    }
+
+                    if(e.key == "w" || e.key == "W") {
+                        wPressed = false;
+                    }
+                    if(e.key == "s" || e.key == "S") {
+                        sPressed = false;
+                    }
+                    if(e.key == "d" || e.key == "D") {
+                        dPressed = false;
+                    }
+                    if(e.key == "a" || e.key == "A") {
+                        aPressed = false;
+                    }
+                }
+
+
+            //myGamePiece
             myGamePiece.speedX = 0;
             myGamePiece.speedY = 0;
-            if (myGameArea.key == 68) {myGamePiece.speedX = 5}
-            if (myGameArea.key == 65) {myGamePiece.speedX = -5}
-            if (myGameArea.key == 87 && myGamePiece.y > myGameArea.canvas.height - 31) {myGamePiece.gravitySpeed = -5}
-            if (myGameArea.key == 87) {myGamePiece.bounce = 0.5}
-            if (myGameArea.key == 83) {myGamePiece.bounce = 0.2}
+            if (dPressed == true) {myGamePiece.speedX = 5}
+            if (aPressed == true) {myGamePiece.speedX = -5}
+            if (wPressed == true && myGamePiece.y > myGameArea.canvas.height - myGamePiece.height - 1) {myGamePiece.gravitySpeed = -5}
+            if (wPressed == true) {myGamePiece.bounce = 0.5}
+            if (sPressed == true) {myGamePiece.bounce = 0.2}
+
+            //myGamePiece2
+            myGamePiece2.speedX = 0;
+            myGamePiece2.speedY = 0;
+            if (rightPressed == true) {myGamePiece2.speedX = 5}
+            if (leftPressed == true) {myGamePiece2.speedX = -5}
+            if (upPressed == true && myGamePiece2.y > myGameArea.canvas.height - myGamePiece2.height - 1) {myGamePiece2.gravitySpeed = -5}
+            if (upPressed == true) {myGamePiece2.bounce = 0.5}
+            if (downPressed == true) {myGamePiece2.bounce = 0.2}
 
             
 
             // w=87, s=83, d=68, a=65
-            //if (myGameArea.key == 39) {myGamePiece.speedX = 1; }dww
+            //if (myGameArea.key == 39) {myGamePiece.speedX = 1; }
             //if (myGameArea.key == 37) {myGamePiece.speedX = -1; }
             //if (myGameArea.key == 38) {myGamePiece.speedX = -1; }
             //if (myGameArea.key == 40) {myGamePiece.speedX = 1; }
@@ -116,6 +202,8 @@ canvas {
 
             myGamePiece.newPos();
             myGamePiece.update();
+            myGamePiece2.newPos();
+            myGamePiece2.update();
         }
         
         
