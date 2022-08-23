@@ -41,7 +41,7 @@ var images = [
     "Frans_Karlsson<frans_karlsson<frans<karlsson",
     "Isac_Ekeroth<isac_ekeroth<isac<ekeroth",
     "Jack_Blomquist<jack_blomquist<jack<blomquist",
-    "Daniel_(Joel)_Lundhag<joel_lundhag<daniel<daniel_lundhag<joel<lundhag",
+    "Daniel_(Joel)_Lundhag<joel_lundhag<daniel<daniel_lundhag<joel<lundhag<damn_daniel",
     "Jonas_Olanders<jonas_olanders<jonas<olanders",
     "Linus_Gamborn<linus_gamborn<linus<gamborn",
     "Linus_Eriksson<linus_eriksson<linus<eriksson",
