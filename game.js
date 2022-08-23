@@ -71,10 +71,13 @@ const display_list_length = document.getElementById("person");
 const end_text_score = document.getElementById("end_text_score");
 const end_text_message = document.getElementById("end_text_message");
 
+
 display_list_length.innerHTML = people.length;
 
 // ser till att första bilden altid är rätt person
 pic.src = images[getPointerVal(pointer)]
+
+guess_button.style.visibility = "visible";
 
 
 
@@ -230,3 +233,16 @@ function shuffle(array) {
 
   return array;
 }
+
+
+document.addEventListener("keyup", function(event) {
+  if (event.key === "Enter") {
+    if (guess_button.style.visibility == "visible"){
+      clicked()
+    }
+    else {
+      next_person()
+    }
+    
+  }
+});
